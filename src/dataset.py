@@ -12,13 +12,12 @@ class Places2(Dataset):
 
         # get the list of image paths
         if data == 'train':
-            self.paths = glob('{}/data_256/**/*.jpg'.format(data_root),
+            self.paths = glob('{}/data_256/**/*.png'.format(data_root),
                               recursive=True)
             self.mask_paths = glob('{}/mask/*.png'.format(data_root))
         else:
-            self.paths = glob('{}/val_256/*.jpg'.format(data_root, data))
+            self.paths = glob('{}/val_256/*.png'.format(data_root, data))
             self.mask_paths = glob('{}/val_mask/*.png'.format(data_root))
-
         self.N_mask = len(self.mask_paths)
 
     def __len__(self):

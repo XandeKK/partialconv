@@ -16,7 +16,7 @@ class Places2(Dataset):
                               recursive=True)
             self.mask_paths = glob('{}/mask/*.png'.format(data_root))
         else:
-            self.paths = glob('{}/val_256/*.png'.format(data_root, data))
+            self.paths = glob('{}/val_256/*.png'.format(data_root))
             self.mask_paths = glob('{}/val_mask/*.png'.format(data_root))
         self.N_mask = len(self.mask_paths)
 
